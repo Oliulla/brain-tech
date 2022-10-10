@@ -1,10 +1,10 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
 import headerImg from '../../Images/headerImg.jpg'
 import Quiz from '../Quiz/Quiz';
+import { QuizContext } from '../Root/Root';
 
 const Home = () => {
-    const quizes = useLoaderData().data;
+    const quizes = useContext(QuizContext);
     // console.log(quizes)
     return (
         <main className='w-full'>
