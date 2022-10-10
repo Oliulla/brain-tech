@@ -42,19 +42,20 @@ const Nav = () => {
     ];
 
     return (
-        <div className='bg-slate-800 w-full py-4 px-14 flex justify-between items-center'>
+        <nav className='z-50 bg-gray-800 w-full py-4 px-14 flex justify-between items-center'>
             <div>
                 <Link className='text-2xl font-semibold' to='/'>Brain Tech</Link>
                 {/* <h1 className='text-blue-400 text-2xl md:text-3xl font-semibold'>Brain Tech</h1> */}
             </div>
             <div className={`
-            bg-slate-800 w-3/6 md:w-auto h-full absolute md:static flex flex-col md:flex md:flex-row 
-            pl-5 text-yellow-200 gap-8 ease-in-out duration-700 ${open ? 'left-0 top-16': 'left-[-500px] top-16'} `}
+            bg-slate-800 w-3/6 md:w-auto h-full absolute md:sticky flex flex-col md:flex md:flex-row 
+            items-center py-7 md:py-0 gap-6 md:gap-14 ease-in-out duration-700 ${open ? 'left-0 top-16': 'left-[-500px] top-16'} `}
             >
                 {
                     menus.map(menu => <Link 
                         key={menu.id}
                         to={menu.path}
+                        className="hover:text-yellow-200"
                         >
                             {menu.name}
                         </Link>
@@ -66,7 +67,7 @@ const Nav = () => {
                     !open ? <Bars3Icon /> : <XMarkIcon /> 
                 }
             </div>
-        </div>
+        </nav>
     );
 };
 
