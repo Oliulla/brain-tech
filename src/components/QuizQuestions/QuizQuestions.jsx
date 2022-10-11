@@ -8,10 +8,11 @@ const QuizQuestions = () => {
     return (
         <div className='my-20 w-8/12 mx-auto'>
             {
-                quizQuestions.map(quizQuestion => (
+                quizQuestions.map((quizQuestion, index) => (
                     <QuizQuestionsDetails 
                         key={quizQuestion.id}
                         quizQuestion={quizQuestion}
+                        index={index}
                     />
                 )
                 )

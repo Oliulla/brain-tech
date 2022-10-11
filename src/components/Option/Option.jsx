@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Option.css'
 
 const Option = ({option, quizQuestion}) => {
     const {correctAnswer} = quizQuestion
-    const {findCorrect, setFindCorrect} = useState();
+    const {findCorrect, setFindCorrect} = useState(false);
     
     const handleFindCorrect = (clickedOption) => {
         // console.log(clickedOption, '||',  correctAnswer)
@@ -14,9 +16,11 @@ const Option = ({option, quizQuestion}) => {
         // const dataChk = clickedOption === correctAnswer;
         if(userClickedOption === correctOption) {
             console.log('correct answere')
+            toast.success("Correct Answere!", {autoClose: 600});
         }
         else {
-            console.log('incorrect answere')
+            toast.warning('Incorrect Answere', {autoClose: 600});
+            
         }
         // setFindCorrect('False');
         // console.log("Not correct")
@@ -26,9 +30,8 @@ const Option = ({option, quizQuestion}) => {
     return (
         <div 
             onClick={(e) => handleFindCorrect(e.target.innerText)}
-
-            className='listSquare border border-emerald-500 mt-8 text-2xl w-11/12 md:w-8/12 
-            px-2 py-4 cursor-pointer'
+            className={`listSquare border border-emerald-500 mt-8 text-2xl w-11/12 md:w-8/12 
+            px-2 py-4 cursor-pointer  `}
         >
             <p>{option}</p>
         </div>
