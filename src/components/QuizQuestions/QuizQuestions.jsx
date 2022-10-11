@@ -4,6 +4,7 @@ import QuizQuestionsDetails from '../QuizQuestionsDetails/QuizQuestionsDetails';
 
 const QuizQuestions = () => {
     const quizQuestions = useLoaderData().data.questions;
+    
     return (
         <div className='my-20 w-8/12 mx-auto'>
             {

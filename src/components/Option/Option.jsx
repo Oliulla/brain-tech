@@ -4,17 +4,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Option.css'
 
 const Option = ({option, quizQuestion}) => {
-    const {correctAnswer} = quizQuestion
+    const {correctAnswer} = quizQuestion;
     
     const handleFindCorrect = (clickedOption) => {
         const correctOption = correctAnswer.split(' ').join('');
         const userClickedOption = clickedOption.split(' ').join('');
         
         if(userClickedOption === correctOption) {
-            toast.success("Correct Answere!", {autoClose: 900});
+            toast.success("Correct Answer!", {autoClose: 900});
         }
         else {
-            toast.warning('Incorrect Answere', {autoClose: 900});
+            toast.warning('Incorrect Answer', {autoClose: 900});
         }
     }
 
