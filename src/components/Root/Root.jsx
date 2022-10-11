@@ -12,6 +12,7 @@ const Root = () => {
         <QuizContext.Provider value={quizes}>
             <Nav />
             <Outlet />
+            <Footer />
         </QuizContext.Provider>
         // <QuizContext.Provider value={quizes}>
         //     <Nav />
