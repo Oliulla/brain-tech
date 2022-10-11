@@ -9,7 +9,6 @@ const QuizQuestionsDetails = ({quizQuestion, index}) => {
     const handleShowCorrectAnswere = () => {
         setCorrect(correctAnswer)
     }
-    console.log(correct)
 
     return (
         <div className='flex flex-col items-start my-14'>
@@ -24,9 +23,9 @@ const QuizQuestionsDetails = ({quizQuestion, index}) => {
                 <p className={`bg-gray-700 md:w-9/12 p-4 rounded-md mt-2 md:text-xl ${correct ? 'block' : 'hidden'}`}>{correct}</p>
             </ol>
             {
-                options.map(option => 
+                options.map((option, idx) => 
                     <Option
-                        key={option.id} 
+                        key={idx} 
                         option={option}
                         quizQuestion={quizQuestion}
                     />
