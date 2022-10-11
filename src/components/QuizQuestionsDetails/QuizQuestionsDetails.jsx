@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import Option from '../Option/Option';
 
-const QuizQuestionsDetails = ({quizQuestion, index}) => {
+const QuizQuestionsDetails = ({quizQuestion, index, countCorrect, setCountCorrect}) => {
     const [correct, setCorrect] = useState();
     const {question, correctAnswer, options} = quizQuestion;
 
@@ -33,6 +33,8 @@ const QuizQuestionsDetails = ({quizQuestion, index}) => {
                         key={idx} 
                         option={option}
                         quizQuestion={quizQuestion}
+                        countCorrect={countCorrect}
+                        setCountCorrect={setCountCorrect}
                     />
                 )
             }

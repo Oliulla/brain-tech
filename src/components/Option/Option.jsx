@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Option.css'
 
-const Option = ({option, quizQuestion}) => {
+const Option = ({option, quizQuestion, countCorrect, setCountCorrect}) => {
     const {correctAnswer} = quizQuestion;
     
     const handleFindCorrect = (clickedOption) => {
@@ -11,10 +11,11 @@ const Option = ({option, quizQuestion}) => {
         const userClickedOption = clickedOption.split(' ').join('');
         
         if(userClickedOption === correctOption) {
-            toast.success("Correct Answer!", {autoClose: 900});
+            toast.success("Correct Answer!", {autoClose: 1200});
+            setCountCorrect(countCorrect + 1);
         }
         else {
-            toast.warning('Incorrect Answer', {autoClose: 900});
+            toast.warning('Incorrect Answer', {autoClose: 1200});
         }
     }
 
@@ -22,7 +23,7 @@ const Option = ({option, quizQuestion}) => {
         <div 
             onClick={(e) => handleFindCorrect(e.target.innerText)}
             className={`listSquare border border-emerald-500 mt-8 text-2xl w-11/12 md:w-8/12 
-            px-2 py-4 cursor-pointer`}
+            px-2 py-4 cursor-pointer `}
         >
             <p>{option}</p>
         </div>

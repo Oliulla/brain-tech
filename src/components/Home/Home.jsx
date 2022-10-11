@@ -5,7 +5,7 @@ import { QuizContext } from '../Root/Root';
 
 const Home = () => {
     const quizes = useContext(QuizContext);
-    // console.log(quizes)
+    
     return (
         <main className='w-full'>
             <header className='my-8 flex justify-center'>
