@@ -10,8 +10,11 @@ const Home = () => {
         <main className='w-full'>
             <header className='my-8 flex justify-center'>
                 <img className='w-10/12 md:w-8/12 h-60' src={headerImg} alt="Quiz Quistion" />
-                <p className='text-center hidden md:block md:absolute top-36 text-2xl bg-gray-800 p-4 w-6/12'>Let Raise Your Skills Through Playing Quiz</p>
+                <p className='text-center hidden md:block md:absolute top-36 text-2xl bg-gray-800 p-4 w-6/12'>
+                    Let Raise Your Skills Through Playing Quiz
+                </p>
             </header>
+            
             <section className="my-12 w-9/12 mx-auto md:grid grid-cols-2 gap-12">
                 {
                     quizes.map(quiz => (
@@ -19,8 +22,7 @@ const Home = () => {
                             key={quiz.id}
                             quiz={quiz} 
                         />
-                    ) 
-                    )
+                    ))
                 }
             </section>
         </main>

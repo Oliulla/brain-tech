@@ -14,7 +14,7 @@ import {
   } from "recharts";
 
 
-  const assignments = [
+const assignments = [
     {
       assignment: 'Assignment 1',
       marks: 60
@@ -49,12 +49,11 @@ import {
     }
 ];
 
-
 const Stats = () => {
     const data = useContext(QuizContext);
 
     return (
-        <div className='w-11/12 flex flex-col items-center md:w-9/12 mx-auto my-10'>
+        <div className='w-11/12 flex flex-col items-center md:w-9/12 mx-auto my-10 text-gray-800'>
             <ResponsiveContainer width="95%" height={400}>
                 <BarChart
                     width={500}
@@ -76,7 +75,7 @@ const Stats = () => {
                     <Bar dataKey="total" fill="#82ca9d" />
                 </BarChart>
             </ResponsiveContainer>
-            <div className='mt-32 mb-6 text-2xl'>
+            <div className='mt-32 mb-6 text-2xl text-white'>
                 <h3>Assignments Marks</h3>
             </div>
             <ResponsiveContainer width="95%" height={400}>
