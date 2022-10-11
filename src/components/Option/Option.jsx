@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Option.css'
 
 const Option = ({option, quizQuestion, countCorrect, setCountCorrect}) => {
     const {correctAnswer} = quizQuestion;
+    const [checkCorrect, setCheckCorrect] = useState(0);
     
     const handleFindCorrect = (clickedOption) => {
         const correctOption = correctAnswer.split(' ').join('');
@@ -12,10 +13,12 @@ const Option = ({option, quizQuestion, countCorrect, setCountCorrect}) => {
         
         if(userClickedOption === correctOption) {
             toast.success("Correct Answer!", {autoClose: 1200});
+            setCheckCorrect(1)
             setCountCorrect(countCorrect + 1);
         }
         else {
             toast.warning('Incorrect Answer', {autoClose: 1200});
+            setCheckCorrect(2)
         }
     }
 
@@ -23,7 +26,7 @@ const Option = ({option, quizQuestion, countCorrect, setCountCorrect}) => {
         <div 
             onClick={(e) => handleFindCorrect(e.target.innerText)}
             className={`listSquare border border-emerald-500 mt-8 text-2xl w-11/12 md:w-8/12 
-            px-2 py-4 cursor-pointer `}
+            px-2 py-4 cursor-pointer ${checkCorrect === 1 ? 'bg-blue-800' : checkCorrect === 2 ? 'bg-red-600' : 'bg-gray-600'} `}
         >
             <p>{option}</p>
         </div>
