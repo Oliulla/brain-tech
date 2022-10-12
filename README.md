@@ -1,14 +1,14 @@
 # Brain Tech React Quiz App
 
-This is a Quiz App for those people who want to raise them knowledge through playing quiz.
+This is a Quiz App for those people who want to raise their knowledge through playing quiz.
 
 ## Technologies
 
 HTML, CSS, Tailwind CSS, JavaScript and React.
 
-## Inner Technologies
+## Packages & Features
 
-#### Context API v6.4, React Router v6.4, Rechart, Toastify, Hero Icon
+#### Context API v6.4, React Router v6.4, React Rechart, React Toastify, React aos and Hero Icon
 
 ## Features Of This App
 
