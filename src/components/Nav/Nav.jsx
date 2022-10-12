@@ -8,8 +8,9 @@ const Nav = () => {
     // declare an array for all nav links
     const menus = [
         {id: 1, path: '/home', name: 'Home'},
-        {id: 2, path: '/stats', name: 'Stats'},
-        {id: 3, path: '/blogs', name: 'Blogs'},
+        {id: 2, path: '/topics', name: 'Quiz Topics'},
+        {id: 3, path: '/stats', name: 'Stats'},
+        {id: 4, path: '/blogs', name: 'Blogs'},
     ];
 
     return (

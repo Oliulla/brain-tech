@@ -8,9 +8,7 @@ const Option = ({option, quizQuestion, countCorrect, setCountCorrect}) => {
     
     const handleFindCorrect = (clickedOption) => {
 
-        // split, then join both correct option and user clicked option due to extra gap in correct option
-        // const correctOption = correctAnswer.split(' ').join('');
-        // const userClickedOption = clickedOption.split(' ').join('');
+        // regex for remove extra gap in correct option
         const correctOption = correctAnswer.replace(/\s+/g, " ");
         const userClickedOption = clickedOption.replace(/\s+/g, " ");
         

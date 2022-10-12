@@ -3,6 +3,7 @@ import Blogs from "../components/Blogs/Blogs";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import QuizQuestions from "../components/QuizQuestions/QuizQuestions";
+import QuizTopics from "../components/QuizTopics/QuizTopics";
 import Root from "../components/Root/Root";
 import Stats from "../components/Stats/Stats";
 
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
             {
                 path: '/home',
                 element: <Home />
+            },
+            {
+                path: '/topics',
+                element: <QuizTopics />
             },
             {
                 path: '/quiz/:quizId',
