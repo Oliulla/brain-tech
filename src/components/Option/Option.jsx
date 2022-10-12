@@ -7,8 +7,10 @@ const Option = ({option, quizQuestion, countCorrect, setCountCorrect}) => {
     const [checkCorrect, setCheckCorrect] = useState(0);
     
     const handleFindCorrect = (clickedOption) => {
-        const correctOption = correctAnswer.split(' ').join('');
-        const userClickedOption = clickedOption.split(' ').join('');
+        const correctOption = correctAnswer.split(' ').join(' ');
+        console.log(correctOption);
+        const userClickedOption = clickedOption.split(' ').join(' ');
+        console.log(userClickedOption);
         
         if(userClickedOption === correctOption) {
             toast.success("Correct Answer!", {autoClose: 1200});

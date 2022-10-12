@@ -16,7 +16,7 @@ const Blogs = () => {
                     web application with navigation without the page refreshing as the user navigates. 
                 </p>
             </div>
-
+ 
             <div className='mt-8'>
                 <h2 className='text-3xl'>2. How Does Context API Work?</h2>
                 <p className='text-red-600'>Ans:</p>
@@ -29,7 +29,7 @@ const Blogs = () => {
                     easily get from its child using useContext method.
                 </p>
             </div>
-            
+
             <div className='mt-8'>
                 <h2 className='text-3xl'>3. What Is The React useRef Hook</h2>
                 <p className='text-red-600'>Ans:</p>
