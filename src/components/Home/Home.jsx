@@ -4,6 +4,7 @@ import Quiz from '../Quiz/Quiz';
 import { QuizContext } from '../Root/Root';
 
 const Home = () => {
+    // get loader data using context
     const quizes = useContext(QuizContext);
     
     return (

@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
+    
     return (
         <div className='text-yellow-500 w-full h-auto p-20 bg-gray-900 
             flex flex-col md:flex-row md:justify-evenly gap-8'

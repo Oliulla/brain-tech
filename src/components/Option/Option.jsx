@@ -7,19 +7,24 @@ const Option = ({option, quizQuestion, countCorrect, setCountCorrect}) => {
     const [checkCorrect, setCheckCorrect] = useState(0);
     
     const handleFindCorrect = (clickedOption) => {
-        const correctOption = correctAnswer.split(' ').join(' ');
-        console.log(correctOption);
-        const userClickedOption = clickedOption.split(' ').join(' ');
-        console.log(userClickedOption);
+
+        // split, then join both correct option and user clicked option due to extra gap in correct option
+        const correctOption = correctAnswer.split(' ').join('');
+        const userClickedOption = clickedOption.split(' ').join('');
         
         if(userClickedOption === correctOption) {
             toast.success("Correct Answer!", {autoClose: 1200});
+
+            // for option background make changeble
             setCheckCorrect(1)
 
+            // count correct answers
             setCountCorrect(countCorrect + 1);
         }
         else {
-            toast.warning('Incorrect Answer', {autoClose: 1200});
+            toast.warning("Incorrect Answer", {autoClose: 1200});
+
+            // for option background make changeble
             setCheckCorrect(2)
         }
     }

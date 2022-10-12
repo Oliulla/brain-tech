@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Blogs = () => {
+    
     return (
         <div className='mt-16 mb-20 md:w-9/12 mx-auto px-4'>
             <h3 className='text-center text-3xl'>All Blogs</h3>

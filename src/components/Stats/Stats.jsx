@@ -14,6 +14,7 @@ import {
   } from "recharts";
 
 
+// declare an array of object for makeing a line chart
 const assignments = [
     {
       assignment: 'Assignment 1',
@@ -75,9 +76,11 @@ const Stats = () => {
                     <Bar dataKey="total" fill="#82ca9d" />
                 </BarChart>
             </ResponsiveContainer>
+
             <div className='mt-32 mb-6 text-2xl text-white'>
                 <h3>Assignments Marks</h3>
             </div>
+            
             <ResponsiveContainer width="95%" height={400}>
                 <LineChart
                 width={500}
@@ -99,7 +102,6 @@ const Stats = () => {
                 </LineChart>
             </ResponsiveContainer>
         </div>
-
     );
 };
 

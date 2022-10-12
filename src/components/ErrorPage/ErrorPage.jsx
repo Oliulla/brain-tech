@@ -3,6 +3,7 @@ import { useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
     const error = useRouteError();
+    
     return (
         <div className='flex flex-col justify-center items-center h-96 text-3xl w-auto'>
             <h1>Opps! You Are In Wrong Path.</h1>

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
     const [open, setOpen] = useState(false);
+
+    // declare an array for all nav links
     const menus = [
         {id: 1, path: '/home', name: 'Home'},
         {id: 2, path: '/stats', name: 'Stats'},

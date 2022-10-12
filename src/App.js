@@ -6,7 +6,8 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 
 function App() {
-  // Added A animation side effect
+  
+  // Added an animation side effect
   useEffect(() => {
     AOS.init();
     AOS.refresh();
