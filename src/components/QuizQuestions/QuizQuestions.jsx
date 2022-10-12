@@ -3,11 +3,14 @@ import { useLoaderData } from 'react-router-dom';
 import QuizQuestionsDetails from '../QuizQuestionsDetails/QuizQuestionsDetails';
 
 const QuizQuestions = () => {
-    const quizQuestions = useLoaderData().data.questions;
+    const loaderData = useLoaderData().data
+    const {questions, name} = loaderData;
+
     const [countCorrect, setCountCorrect] = useState(0);
 
     return (
         <section className='my-20 w-8/12 mx-auto'>
+            <h2 className='md:text-3xl mb-2'>Quiz Of {name}</h2>
             {
                 countCorrect ? <p className='rounded-md bg-blue-900 md:w-3/6 px-8 py-4 text-xl md:text-2xl'
                 >
@@ -16,7 +19,7 @@ const QuizQuestions = () => {
                 : undefined
             }
             {
-                quizQuestions.map((quizQuestion, index) => (
+                questions.map((quizQuestion, index) => (
                     <QuizQuestionsDetails 
                         key={quizQuestion.id}
                         quizQuestion={quizQuestion}
